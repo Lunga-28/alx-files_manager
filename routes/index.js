@@ -6,6 +6,7 @@ import FilesController from '../controllers/FilesController';
 import { basicAuthenticate, xTokenAuthenticate } from '../middlewares/auth';
 import { APIError, errorResponse } from '../middlewares/error';
 
+
 const injectRoutes = (api) => {
   api.get('/status', AppController.getStatus);
   api.get('/stats', AppController.getStats);
@@ -29,4 +30,4 @@ const injectRoutes = (api) => {
   api.use(errorResponse);
 };
 
-export default injectRoutes;  
+export default injectRoutes;
